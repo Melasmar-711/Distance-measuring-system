@@ -1,0 +1,42 @@
+/*
+ * icu..h
+ * Created on: Oct 18, 2021
+ * Author: Mahmoud EL-Asmar
+ */
+
+#ifndef ICU__H_
+#define ICU__H_
+
+
+#include "common_macros.h"
+#include "std_types.h"
+#include <avr/io.h>
+
+#define edge_Type_Bit	ICES1
+
+typedef enum
+{
+	timer_off,F_CPU1,F_CPU8,F_CPU64,F_CPU256,F_CPU1024
+}clock;
+
+typedef enum
+{
+	FALLING_edge,RISING_edge
+}edge_type;
+typedef struct
+{
+	clock ICU_clock;
+	edge_type  TRIGGER_egde;
+}ICU_ConfigType;
+
+
+void ICU_init(ICU_ConfigType *configurations);
+void ICU_setCallBack(void(*ptr_fun)(void));
+void ICU_edgeDetectionType(edge_type new_edge);
+uint16 Icu_getInputCaptureValue(void);
+void Icu_clearTimerValue(void);
+void Icu_DeInit(void);
+
+
+
+#endif /* ICU__H_ */

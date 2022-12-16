@@ -1,0 +1,32 @@
+/*
+ * icu..h
+ * Created on: Oct 18, 2021
+ * Author: Mahmoud EL-Asmar
+ */
+
+#ifndef ICU__H_
+#define ICU__H_
+
+
+#include "common_macros.h"
+#include "std_types.h"
+#include <avr/io.h>
+
+
+typedef enum
+{
+	timer_off,F_CPU1,F_CPU8,F_CPU64,F_CPU256,F_CPU1024
+}clock;
+
+typedef enum
+{
+	FALLING,RISING
+}edge;
+typedef struct
+{
+	clock ICU_clock;
+	edge  TRIGGER_egde;
+}ICU_ConfigType;
+
+
+#endif /* ICU__H_ */

@@ -1,0 +1,42 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 18, 2021
+ *      Author: Mahmoud EL-Asmar
+ */
+
+
+#include "gpio.h"
+#include "lcd.h"
+#include "std_types.h"
+#include"ultra_sonic.h"
+#include"icu.h"
+
+
+int main()
+{
+	uint16 distance=10;
+	Ultrasonic_init();
+	LCD_init();
+
+
+	while(1);
+	{
+
+		LCD_displayString("Distance=     cm");
+	distance=Ultrasonic_readDistance();
+	LCD_moveCursor(1,11);
+	LCD_intgerToString(distance);
+	if(distance<10)
+	{
+
+		LCD_displayString("  ");
+	}
+	if(distance>10&&distance<100)
+	{
+		LCD_displayString(" ");
+	}
+	}
+}
+
+

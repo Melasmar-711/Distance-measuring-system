@@ -1,0 +1,36 @@
+21:50:54 **** Incremental Build of configuration Debug for project project_four ****
+make all 
+Building file: ../ultra_sonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ultra_sonic.d" -MT"ultra_sonic.o" -c -o "ultra_sonic.o" "../ultra_sonic.c"
+In file included from ../ultra_sonic.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultra_sonic.c
+ 
+Building target: project_four.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,project_four.map -mmcu=atmega16 -o "project_four.elf"  ./gpio.o ./icu.o ./lcd.o ./main.o ./ultra_sonic.o   
+Finished building target: project_four.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S project_four.elf  >"project_four.lss"
+Finished building: project_four.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 project_four.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    8746 bytes (53.4% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (3.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+21:50:55 Build Finished. 0 errors, 1 warnings. (took 980ms)
+

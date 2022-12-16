@@ -1,0 +1,18 @@
+20:10:44 **** Incremental Build of configuration Debug for project project 4 ****
+make all 
+Building file: ../ultra_sonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ultra_sonic.d" -MT"ultra_sonic.o" -c -o "ultra_sonic.o" "../ultra_sonic.c"
+In file included from ../ultra_sonic.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultra_sonic.c
+ 
+Building target: project 4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,project 4.map -mmcu=atmega16 -o "project 4.elf"  ./gpio.o ./icu.o ./lcd.o ./main.o ./ultra_sonic.o   
+avr-gcc.exe: 4.map: No such file or directory
+make: *** [project 4.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+20:10:45 Build Failed. 1 errors, 1 warnings. (took 617ms)
+

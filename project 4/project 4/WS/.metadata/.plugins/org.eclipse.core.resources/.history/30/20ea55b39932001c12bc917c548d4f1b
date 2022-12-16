@@ -1,0 +1,11 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 18, 2021
+ *      Author: Mahmoud EL-Asmar
+ */
+
+
+#include "gpio.h"
+#include "lcd.h"
+#include "std_types.h"

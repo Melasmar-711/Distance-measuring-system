@@ -1,0 +1,16 @@
+/*
+ * icu..h
+ * Created on: Oct 18, 2021
+ * Author: Mahmoud EL-Asmar
+ */
+
+#ifndef ICU__H_
+#define ICU__H_
+
+#include "common_macros.h"
+#include "std_types.h"
+
+
+
+
+#endif /* ICU__H_ */

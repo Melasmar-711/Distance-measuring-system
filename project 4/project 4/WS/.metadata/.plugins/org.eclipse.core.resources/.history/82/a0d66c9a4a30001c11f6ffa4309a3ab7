@@ -1,0 +1,16 @@
+/*
+ * icu.c
+ *
+ *  Created on: Oct 18, 2021
+ *      Author: Mahmoud EL-Asmar
+ */
+
+
+#include "icu.h"
+
+
+void ICU_init(ICu_ConfigType *configurations)
+{
+	TCCR1B=
+
+}

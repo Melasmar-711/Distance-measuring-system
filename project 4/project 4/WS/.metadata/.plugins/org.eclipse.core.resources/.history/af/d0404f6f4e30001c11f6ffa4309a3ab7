@@ -1,0 +1,21 @@
+/*
+ * icu.c
+ *
+ *  Created on: Oct 18, 2021
+ *      Author: Mahmoud EL-Asmar
+ */
+
+
+#include "icu.h"
+
+
+void ICU_init(ICU_ConfigType *configurations)
+{
+	TCCR1B=(TCCR1B&0xF8)|(configurations->ICU_clock);
+	/*setting the clock of timer 1*/
+	TCCR1B=(TCCR1B&0xBF)|((configurations->TRIGGER_egde)<<6);
+	/*setting the type of edge to be selected at the beginning */
+	TCCR1A=(TCCR1A&0xF3)|(3<<FOC1B);
+
+
+}

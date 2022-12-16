@@ -1,0 +1,32 @@
+/*
+ * ultra_sonic.c
+ * Created on: Oct 21, 2021
+ * Author: Mahmoud EL-Asmar
+ */
+
+#include"ultra_sonic.h"
+#include "icu.h"
+
+ICU_ConfigType configurations;
+
+configurations.ICU_clock=F_CPU8;
+
+void Ultrasonic_init(void)
+{
+	ICU_init();
+
+}
+
+void Ultrasonic_Trigger(void)
+{
+
+}
+
+uint16 Ultrasonic_readDistance(void)
+{
+
+}
+void Ultrasonic_edgeProcessing(void)
+{
+
+}
